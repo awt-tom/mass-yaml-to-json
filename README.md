@@ -5,9 +5,12 @@
 
 ## Why this script
 
-Throughout the years I have learned alot from the Security community and love to give something back to the community! 
+Throughout the years I have learned alot from the Security community and love to give something back to the community!
 
-I can see that many organizations leveled up and done this all through pipelines where others are willing to start, but do not always know where to start. 
+When using Microsoft Sentinel you want your detections to be crisp. This can be done by creating your own analytic rules or use other methodes. 
+But when you want to start out and have no clue, it can be quite a hussle to get started with enabling all the rules, keep them up to date.
+
+I can see that many organizations leveled up and done this all through pipelines where others are finding their way on how to start. 
 With this script I hope I can encourage many more people to start automate their Sentinel Analytic rule management and being able to import many more detection rules in order to find incidents within their environments.
 
 ## Overview
