@@ -63,7 +63,7 @@ if (-not (Get-Module -ListAvailable -Name SentinelARConverter)) {
     if ($userResponse -eq 'y' -or $userResponse -eq 'Y') {
         Write-Host "Installing SentinelARConverter module from the PowerShell Gallery..." -ForegroundColor Yellow
         try {
-            Install-Module -Name SentinelARConverter -Force -ErrorAction Stop
+            Install-Module -Name SentinelARConverter -Scope CurrentUser -Force -ErrorAction Stop
             Import-Module SentinelARConverter
         } catch {
             Write-Host "Failed to install SentinelARConverter module. Reason: $_ " -ForegroundColor Red
