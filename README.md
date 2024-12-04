@@ -20,21 +20,17 @@ Adding the rules to for example Azure Devops makes it possible to deploy all the
 
 Huge credit to [Fabian Bader](https://github.com/f-bader) for creating the powershell module SentinelARConverter which is being used in the script.
 
+Download the script and place it in a folder where you want to store the analytic rules. 
+
+- CD to the path of the script
+- Run Convert-YamlToSjon.ps1
+
 ## Synopsis
 
 **Standard run**
 ```powershell
 .\Convert-YamlToJson.ps1
 ```
-**Show folders without Analytic Rules inside them**
-```powershell
-.\Convert-YamlToJson.ps1 -NoARfolders
-```
-**Define other locations (Make sure to have the correct path/repo)**
-```powershell
-.\Convert-YamlToJson.ps1 -RepoUrl "https://github.com/Azure/Azure-Sentinel" -SourceRoot "C:\temp\Azure-sentinel\Solutions" -DestinationRoot "C:\Convertedrules"
-```
-
 ## Description
 
 The script performs the following tasks:
@@ -44,29 +40,6 @@ The script performs the following tasks:
 3. **Saves the JSON files** to a specified local directory, maintaining the original folder structure.
 
 Optionally, the script can display folders that do not contain any analytic rules.
-
-## Parameters
-
-- **`-RepoUrl`**: The URL of the GitHub repository to clone or pull updates from.
-  - Type: `string`
-  - Default: `"https://github.com/Azure/Azure-Sentinel"`
-
-- **`-SourceRoot`**: The local path where the repository content will be stored.
-  - Type: `string`
-  - Default: `"$($pwd.Path)\temp\Azure-sentinel\Solutions"`
-
-- **`-DestinationRoot`**: The local path where the converted JSON files will be saved.
-  - Type: `string`
-  - Default: Current working directory appended with `Converted_rules_<current_date>`
-
-- **`-NoARfolders`**: Shows all folders that do not contain any Analytic Rules.
-  - Type: `switch`
-
-## Example
-
-```powershell
-.\Convert-YamlToJson.ps1 -RepoUrl "https://github.com/Azure/Azure-Sentinel" -SourceRoot "C:\temp\Azure-sentinel\Solutions" -DestinationRoot "C:\Convertedrules"
-```
 
 ## Prerequisites
 
